@@ -3,8 +3,8 @@
 namespace Darvis\ModuleBecomeamember\Livewire;
 
 use Flux\Flux;
-use Manta\Models\Becomeamember;
-use Darvis\Manta\Models\Option;
+use \Darvis\ModuleBecomeamember\Models\Becomeamember;
+use \Darvis\Manta\Models\Option;
 use Livewire\Component;
 use Darvis\Manta\Traits\MantaTrait;
 

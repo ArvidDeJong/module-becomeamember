@@ -2,8 +2,8 @@
 
 namespace Darvis\ModuleBecomeamember\Livewire;
 
-use App\Livewire\Manta\Becomeamember\BecomeamemberTrait;
-use Manta\Models\Becomeamember;
+use Darvis\ModuleBecomeamember\Livewire\BecomeamemberTrait;
+use Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Livewire\Component;
 use Darvis\Manta\Traits\MantaTrait;
 

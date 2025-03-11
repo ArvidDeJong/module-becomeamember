@@ -2,10 +2,9 @@
 
 namespace Darvis\ModuleBecomeamember\Livewire;
 
-
 use DragonCode\Contracts\Http\Builder;
 
-use Manta\Models\Becomeamember;
+use \Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Livewire\Attributes\Locked;
 use Darvis\Manta\Services\Openai;
 

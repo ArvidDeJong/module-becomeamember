@@ -26,8 +26,7 @@
 
         <flux:table.rows>
             @foreach ($items as $item)
-                <livewire:manta.becomeamember.becomeamember-row :$fields :$item :route_name="$this->route_name" :$moduleClass
-                    :key="$item->id">
+                <livewire:becomeamember-list-row :$fields :$item :route_name="$this->route_name" :$moduleClass :key="$item->id">
             @endforeach
         </flux:table.rows>
     </flux:table>

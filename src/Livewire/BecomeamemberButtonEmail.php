@@ -2,12 +2,12 @@
 
 namespace Darvis\ModuleBecomeamember\Livewire;
 
-use App\Mail\MailBecomeamemberCreate;
-use App\Mail\MailCultureleBecomemember;
-use Manta\Models\Becomeamember;
+
+use \Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Component;
-use Darvis\Manta\Models\Option;
+use \Darvis\Manta\Models\Option;
+use Darvis\MantaCulturele\Mail\MailCultureleBecomemember;
 
 class BecomeamemberButtonEmail extends Component
 {
@@ -17,7 +17,7 @@ class BecomeamemberButtonEmail extends Component
 
     public function render()
     {
-        return view('livewire.manta.becomeamember.becomeamember-button-email');
+        return view('module-becomeamember::livewire.becomeamember-button-email');
     }
 
     public function save()

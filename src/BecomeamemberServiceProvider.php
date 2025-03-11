@@ -3,9 +3,9 @@
 namespace Darvis\ModuleBecomeamember;
 
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
 use Illuminate\Support\Facades\{Config, Route, View};
 use Illuminate\Contracts\Foundation\Application;
+use Livewire\Livewire;
 
 class BecomeamemberServiceProvider extends ServiceProvider
 {
@@ -16,7 +16,8 @@ class BecomeamemberServiceProvider extends ServiceProvider
     {
         // Register config
         $this->mergeConfigFrom(
-            __DIR__ . '/config/module_becomeamember.php', 'module_becomeamember'
+            __DIR__ . '/config/module_becomeamember.php',
+            'module_becomeamember'
         );
     }
 
@@ -29,21 +30,23 @@ class BecomeamemberServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 
         // Load views
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'becomeamember');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'module-becomeamember');
 
         // Load migrations
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
         // Register Livewire components
-        Livewire::component('becomeamember-list', \Darvis\ModuleBecomeamember\Livewire\Becomeamember\BecomeamemberList::class);
-        Livewire::component('becomeamember-create', \Darvis\ModuleBecomeamember\Livewire\Becomeamember\BecomeamemberCreate::class);
-        Livewire::component('becomeamember-update', \Darvis\ModuleBecomeamember\Livewire\Becomeamember\BecomeamemberUpdate::class);
-        Livewire::component('becomeamember-read', \Darvis\ModuleBecomeamember\Livewire\Becomeamember\BecomeamemberRead::class);
-        Livewire::component('becomeamember-settings', \Darvis\ModuleBecomeamember\Livewire\Becomeamember\BecomeamemberSettings::class);
+        Livewire::component('becomeamember-list-row', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberListRow::class);
+        Livewire::component('becomeamember-list', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberList::class);
+        Livewire::component('becomeamember-create', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberCreate::class);
+        Livewire::component('becomeamember-update', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberUpdate::class);
+        Livewire::component('becomeamember-read', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberRead::class);
+        Livewire::component('becomeamember-settings', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberSettings::class);
+        Livewire::component('becomeamember-button-email', \Darvis\ModuleBecomeamember\Livewire\BecomeamemberButtonEmail::class);
 
         // Publish assets when running in console
         if ($this->app->runningInConsole()) {
-            // Publish config
+            // Publish config   
             $this->publishes([
                 __DIR__ . '/config/module_becomeamember.php' => base_path('config/module_becomeamember.php'),
             ], 'becomeamember-config');

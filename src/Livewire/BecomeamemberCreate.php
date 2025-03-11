@@ -3,7 +3,7 @@
 namespace Darvis\ModuleBecomeamember\Livewire;
 
 use Livewire\Component;
-use Manta\Models\Becomeamember;
+use \Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Illuminate\Http\Request;
 use Darvis\Manta\Traits\MantaTrait;
 use Faker\Factory as Faker;

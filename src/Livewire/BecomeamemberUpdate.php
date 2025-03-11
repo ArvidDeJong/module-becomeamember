@@ -4,7 +4,7 @@ namespace Darvis\ModuleBecomeamember\Livewire;
 
 use Flux\Flux;
 use Livewire\Component;
-use Manta\Models\Becomeamember;
+use Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Illuminate\Http\Request;
 use Darvis\Manta\Traits\MantaTrait;
 

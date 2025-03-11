@@ -3,7 +3,7 @@
 namespace Darvis\ModuleBecomeamember\Livewire;
 
 use Livewire\Component;
-use Manta\Models\Becomeamember;
+use \Darvis\ModuleBecomeamember\Models\Becomeamember;
 use Darvis\Manta\Traits\SortableTrait;
 use Darvis\Manta\Traits\WithSortingTrait;
 use Livewire\WithPagination;
@@ -36,6 +36,6 @@ class BecomeamemberList extends Component
         $obj = $this->applySorting($obj);
         $obj = $this->applySearch($obj);
         $items = $obj->paginate(50);
-        return view('livewire.manta.becomeamember.becomeamember-list', ['items' => $items])->title($this->config['module_name']['multiple']);
+        return view('module-becomeamember::livewire.becomeamember-list', ['items' => $items])->title($this->config['module_name']['multiple']);
     }
 }

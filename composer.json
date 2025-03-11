@@ -4,19 +4,31 @@
     "type": "library",
     "license": "MIT",
     "version": "1.0.1",
+    "keywords": [
+        "laravel",
+        "manta",
+        "cms",
+        "membership",
+        "livewire"
+    ],
     "authors": [
         {
             "name": "Darvis",
-            "email": "info@arvid.nl"
+            "email": "info@arvid.nl",
+            "homepage": "https://www.arvid.nl",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.0",
         "livewire/livewire": "^3.0",
-        "livewire/volt": "^1.0",
         "livewire/flux": "^2.0",
         "darvis/manta": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "orchestra/testbench": "^9.0"
     },
     "autoload": {
         "psr-4": {
@@ -26,11 +38,21 @@
             "src/Helpers/helper.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Darvis\\ModuleBecomeamember\\Tests\\": "tests"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
                 "Darvis\\ModuleBecomeamember\\BecomeamemberServiceProvider"
             ]
         }
-    }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
